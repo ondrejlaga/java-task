@@ -20,6 +20,9 @@ public class Task2 {
      * @return - an array of the squares of each number sorted in non-decreasing order
      */
     public int[] squaresOfSortedArray(int[] input) {
+        if (input==null) {
+            return null;
+        }
         return Arrays.stream(input)
                 .map(i -> (int) Math.pow(i, 2))
                 .sorted()
